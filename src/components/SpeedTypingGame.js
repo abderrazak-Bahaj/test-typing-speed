@@ -5,29 +5,30 @@ import React, {
 import './SpeedTypingGame.css';
 import TypingArea from './TypingArea'; // Import the TypingArea component
 
+const paragraphs = [
+    "The sun shone, having no alternative, on the nothing new. - Samuel Beckett, Murphy.",
+    "There is no greater agony than bearing an untold story inside you. - Maya Angelou.",
+    "You have brains in your head. You have feet in your shoes. You can steer yourself any direction you choose. - Dr. Seuss, Oh, the Places You'll Go!",
+    "Life is like riding a bicycle. To keep your balance, you must keep moving. - Albert Einstein.",
+    "The only way to do great work is to love what you do. - Steve Jobs.",
+    "It does not do to dwell on dreams and forget to live. - J.K. Rowling, Harry Potter and the Sorcerer's Stone.",
+    "In three words I can sum up everything I've learned about life: it goes on. - Robert Frost.",
+    "We are what we pretend to be, so we must be careful about what we pretend to be. - Kurt Vonnegut, Mother Night.",
+    "We're all human, aren't we? Every human life is worth the same, and worth saving. - J.K. Rowling, Harry Potter and the Deathly Hallows.",
+    "To live is the rarest thing in the world. Most people exist, that is all. - Oscar Wilde.",
+    "It is our choices, Harry, that show what we truly are, far more than our abilities. - J.K. Rowling, Harry Potter and the Chamber of Secrets.",
+    "It is never too late to be what you might have been. - George Eliot.",
+    "Some infinities are bigger than other infinities. - John Green, The Fault in Our Stars.",
+    "It is the time you have wasted for your rose that makes your rose so important. - Antoine de Saint-Exupéry, The Little Prince.",
+    "Happiness is not something ready-made. It comes from your own actions. - Dalai Lama XIV.",
+    "The only limits that exist are the ones you place on yourself. - Les Brown.",
+    "Sometimes the heart sees what is invisible to the eye. - H. Jackson Brown, Jr.",
+    "When you reach the end of your rope, tie a knot in it and hang on. - Franklin D. Roosevelt.",
+    "All that is gold does not glitter, not all those who wander are lost. - J.R.R. Tolkien, The Fellowship of the Ring.",
+    "The future belongs to those who believe in the beauty of their dreams. - Eleanor Roosevelt."
+];
 const SpeedTypingGame = () => {
-    const paragraphs = [
-        "The sun shone, having no alternative, on the nothing new. - Samuel Beckett, Murphy.",
-        "There is no greater agony than bearing an untold story inside you. - Maya Angelou.",
-        "You have brains in your head. You have feet in your shoes. You can steer yourself any direction you choose. - Dr. Seuss, Oh, the Places You'll Go!",
-        "Life is like riding a bicycle. To keep your balance, you must keep moving. - Albert Einstein.",
-        "The only way to do great work is to love what you do. - Steve Jobs.",
-        "It does not do to dwell on dreams and forget to live. - J.K. Rowling, Harry Potter and the Sorcerer's Stone.",
-        "In three words I can sum up everything I've learned about life: it goes on. - Robert Frost.",
-        "We are what we pretend to be, so we must be careful about what we pretend to be. - Kurt Vonnegut, Mother Night.",
-        "We're all human, aren't we? Every human life is worth the same, and worth saving. - J.K. Rowling, Harry Potter and the Deathly Hallows.",
-        "To live is the rarest thing in the world. Most people exist, that is all. - Oscar Wilde.",
-        "It is our choices, Harry, that show what we truly are, far more than our abilities. - J.K. Rowling, Harry Potter and the Chamber of Secrets.",
-        "It is never too late to be what you might have been. - George Eliot.",
-        "Some infinities are bigger than other infinities. - John Green, The Fault in Our Stars.",
-        "It is the time you have wasted for your rose that makes your rose so important. - Antoine de Saint-Exupéry, The Little Prince.",
-        "Happiness is not something ready-made. It comes from your own actions. - Dalai Lama XIV.",
-        "The only limits that exist are the ones you place on yourself. - Les Brown.",
-        "Sometimes the heart sees what is invisible to the eye. - H. Jackson Brown, Jr.",
-        "When you reach the end of your rope, tie a knot in it and hang on. - Franklin D. Roosevelt.",
-        "All that is gold does not glitter, not all those who wander are lost. - J.R.R. Tolkien, The Fellowship of the Ring.",
-        "The future belongs to those who believe in the beauty of their dreams. - Eleanor Roosevelt."
-    ];
+   
 
     const [typingText, setTypingText] = useState('');
     const [inpFieldValue, setInpFieldValue] = useState('');
@@ -140,7 +141,7 @@ const SpeedTypingGame = () => {
 
     useEffect(() => {
         loadParagraph();
-    }, []);
+    }, [paragraphs]);
 
     useEffect(() => {
         let interval;
